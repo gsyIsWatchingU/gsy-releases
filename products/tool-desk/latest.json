@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "product": "tool-desk",
+  "name": "Tool Desk",
+  "channel": "stable",
+  "version": "0.3.1",
+  "tag": "tool-desk-v0.3.1",
+  "releaseUrl": "https://github.com/gsyIsWatchingU/gsy-releases/releases/tag/tool-desk-v0.3.1",
+  "feedUrl": "https://github.com/gsyIsWatchingU/gsy-releases/releases/download/tool-desk-v0.3.1/",
+  "publishedAt": "2026-09-21T09:43:31Z",
+  "assets": {
+    "installer": {
+      "name": "tool-desk-0.3.1-setup-x64.exe",
+      "url": "https://github.com/gsyIsWatchingU/gsy-releases/releases/download/tool-desk-v0.3.1/tool-desk-0.3.1-setup-x64.exe",
+      "size": 112252639,
+      "digest": "sha256:6cb95bdf7b7d71c8b2190a8a3f61e63ddb935e24141d5675f6eb80990078eaed"
+    },
+    "portable": {
+      "name": "tool-desk-0.3.1-portable-x64.exe",
+      "url": "https://github.com/gsyIsWatchingU/gsy-releases/releases/download/tool-desk-v0.3.1/tool-desk-0.3.1-portable-x64.exe",
+      "size": 112010459,
+      "digest": "sha256:54da5d3ff337c4b1437815fbe5b7f753f303b843e88dc1f4f85be7ba4b017537"
+    },
+    "metadata": {
+      "name": "latest.yml",
+      "url": "https://github.com/gsyIsWatchingU/gsy-releases/releases/download/tool-desk-v0.3.1/latest.yml",
+      "size": 355,
+      "digest": "sha256:fc7a9e6c62467c83b95bbaf2f700739c0f55acc68a60b6d3ac7d942e7b2152e4"
+    },
+    "blockmap": {
+      "name": "tool-desk-0.3.1-setup-x64.exe.blockmap",
+      "url": "https://github.com/gsyIsWatchingU/gsy-releases/releases/download/tool-desk-v0.3.1/tool-desk-0.3.1-setup-x64.exe.blockmap",
+      "size": 118419,
+      "digest": "sha256:552c51e8e21a3cc51668a62afbc6e841c8319cc733a6d44e8e89c17dd65e7917"
+    }
+  }
+}
