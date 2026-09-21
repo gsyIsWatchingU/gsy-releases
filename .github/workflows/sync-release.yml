@@ -3,6 +3,12 @@ name: 同步产品更新索引
 on:
   release:
     types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 要重新同步的 Release 标签
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -15,12 +21,23 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node scripts/sync-release.mjs "$GITHUB_EVENT_PATH"
+      - name: 准备 Release 事件
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REQUESTED_TAG: ${{ inputs.tag }}
+        run: |
+          if [[ "$GITHUB_EVENT_NAME" == "release" ]]; then
+            cp "$GITHUB_EVENT_PATH" .release-event.json
+          else
+            gh api "repos/$GITHUB_REPOSITORY/releases/tags/$REQUESTED_TAG" | jq '{release: .}' > .release-event.json
+          fi
+      - run: node scripts/sync-release.mjs .release-event.json
       - run: node --test
       - name: 提交产品更新索引
         shell: bash
         run: |
-          if git diff --quiet -- products; then
+          if [[ -z "$(git status --porcelain -- products)" ]]; then
             echo "索引无需更新"
             exit 0
           fi
