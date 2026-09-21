@@ -24,6 +24,7 @@
 1. 新建 `products/<product>/product.json`。
 2. 在 `products/index.json` 登记产品。
 3. 私有源码仓库按 `<product>-v<semver>` 向本仓库发布资产。
-4. 发布工作流必须使用只允许写入本仓库的 GitHub App token 或 fine-grained PAT。
+4. 创建只安装到本仓库、仅授予 `Contents: read and write` 的 GitHub App。
+5. 私有源码仓库保存 `RELEASE_APP_ID` 变量和 `RELEASE_APP_PRIVATE_KEY` Secret，发布时生成短期令牌。
 
 客户端只读取公开索引和 Release 资产，禁止内置 GitHub token。
