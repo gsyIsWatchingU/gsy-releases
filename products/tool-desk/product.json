@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "tool-desk",
+  "name": "Tool Desk",
+  "type": "electron-nsis",
+  "tagPrefix": "tool-desk-v",
+  "requiredAssets": {
+    "installer": "^tool-desk-[0-9]+\\.[0-9]+\\.[0-9]+-setup-x64\\.exe$",
+    "portable": "^tool-desk-[0-9]+\\.[0-9]+\\.[0-9]+-portable-x64\\.exe$",
+    "metadata": "^latest\\.yml$",
+    "blockmap": "^tool-desk-[0-9]+\\.[0-9]+\\.[0-9]+-setup-x64\\.exe\\.blockmap$"
+  }
+}

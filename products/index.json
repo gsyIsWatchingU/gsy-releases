@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "products": [
+    {
+      "id": "tool-desk",
+      "name": "Tool Desk",
+      "type": "electron-windows",
+      "manifest": "products/tool-desk/latest.json"
+    }
+  ]
+}
